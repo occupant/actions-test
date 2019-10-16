@@ -1,4 +1,4 @@
-name: CI-on-timer
+name: CI on timer
 
 on:
   schedule:
