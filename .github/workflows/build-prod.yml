@@ -27,6 +27,6 @@ jobs:
     - uses: stefanzweifel/git-auto-commit-action@v2.1.0
       with:
         commit_message: Apply automatic changes
-        branch: ${{ github.master }}
+        branch: ${{ github.head }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
