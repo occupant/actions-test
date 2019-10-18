@@ -1,6 +1,6 @@
 name: CI Build Production
 
-on: [push]
+on: [pull_request]
 
 jobs:
   build:
@@ -27,6 +27,6 @@ jobs:
     - uses: stefanzweifel/git-auto-commit-action@v2.1.0
       with:
         commit_message: Apply automatic changes
-        branch: ${{ github.head }}
+        branch: ${{ github.head_ref }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
