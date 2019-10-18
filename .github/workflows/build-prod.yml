@@ -1,4 +1,4 @@
-name: CI Build Production
+name: CI Build Production Files
 
 on: [pull_request]
 
@@ -20,7 +20,6 @@ jobs:
     - name: npm install, build, and dist
       run: |
         npm ci
-        npm run development --if-present
         npm run production --if-present
       env:
         CI: true
