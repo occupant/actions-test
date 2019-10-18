@@ -31,7 +31,9 @@
 		"build:prod": "npm run production",
 		"production": "cross-env NODE_ENV=production postcss src/css/styles.css -o dist/css/styles-all.css  && twig-cli \"src/html/*.html.twig\" --base src/html/ --output dist/",
 		"build:html": "cross-env NODE_ENV=production twig-cli \"src/html/*.html.twig\" --base src/html/ --output build/",
-		"build:js": "babel src/html/js --out-file build/js/ubc.all.js --ignore \"src/html/js/libs/*\""
+		"build:js": "babel src/html/js --out-file build/js/ubc.all.js --ignore \"src/html/js/libs/*\"",
+		"build:html-prod": "cross-env NODE_ENV=production twig-cli \"src/html/*.html.twig\" --base src/html/ --output dist/",
+		"build:js-prod": "babel src/html/js --out-file dist/js/ubc.all.js --ignore \"src/html/js/libs/*\""
 	},
 	"dependencies": {
 		"autoprefixer": "^9.6.0",

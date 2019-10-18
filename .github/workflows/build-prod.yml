@@ -22,5 +22,7 @@ jobs:
         npm ci
         npm run development --if-present
         npm run production --if-present
+        npm run build:html-prod --if-present
+        npm run build:js-prod --if-present
       env:
         CI: true
