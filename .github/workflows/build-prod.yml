@@ -9,7 +9,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [8.x, 10.x, 12.x]
+        node-version: [10.x]
 
     steps:
     - uses: actions/checkout@v1
@@ -17,12 +17,16 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: npm install, build, and test
+    - name: npm install, build, and dist
       run: |
         npm ci
         npm run development --if-present
         npm run production --if-present
-        npm run build:html-prod --if-present
-        npm run build:js-prod --if-present
       env:
         CI: true
+    - uses: stefanzweifel/git-auto-commit-action@v2.1.0
+      with:
+        commit_message: Apply automatic changes
+        branch: ${{ github.master }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
