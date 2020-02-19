@@ -1,6 +1,4 @@
-![](https://github.com/occupant/actions-test/.github/workflows/blank.yml/badge.svg)
-![](https://github.com/occupant/actions-test/.github/workflows/build-prod/badge.svg)
-![](https://github.com/occupant/actions-test/.github/workflows/timer/badge.svg)
+![CI on timer](https://github.com/occupant/actions-test/workflows/CI%20on%20timer/badge.svg?branch=master)
 
 # Commands
 
