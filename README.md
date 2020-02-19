@@ -1,4 +1,5 @@
 ![CI on timer](https://github.com/occupant/actions-test/workflows/CI%20on%20timer/badge.svg?branch=master)
+![CI Build Production Files](https://github.com/occupant/actions-test/workflows/CI%20Build%20Production%20Files/badge.svg?branch=master)
 
 # Commands
 
